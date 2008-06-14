@@ -4,7 +4,7 @@
 = Introduction =
 DebuggingFilter is a servlet filter that add a "debug.jspInfo" attribute to the current request to be used in jsp pages, for debugging purpose.
 = Samples =
-See how the [http://www.google.com Google debug info will look like].
+See how the [http://raisercostin.googlecode.com/files/jspinfo.jsp.html debug info will look like].
 = Configuration =
 ==Configure web.xml==
   Add this to your {{{WEB-INF/web.xml}}} file:
