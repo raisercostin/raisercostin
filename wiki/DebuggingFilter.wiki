@@ -23,6 +23,11 @@ See how the [http://raisercostin.googlecode.com/files/jspinfo.jsp.html debug inf
 {{{
     ${debug.jspInfo}
 }}}
+==Configure logging==
+  Add in log4j.properties file :
+{{{
+    log4j.logger.ro.raisercostin.web.DebuggingFilter=debug
+}}}
 ==Configure maven dependencies==
  # Add this to your {{{pom.xml}}} file, inside {{{/project/dependencies/}}} :
 {{{
