@@ -23,15 +23,18 @@ See how the [http://raisercostin.googlecode.com/files/jspinfo.jsp.html debug inf
 {{{
     ${debug.jspInfo}
 }}}
-==Configure request logging==
-  To log the request info add in log4j.properties file :
+==Configure logging==
+  # To log the *request parametes* add in log4j.properties file :
 {{{
-    log4j.logger.ro.raisercostin.web.DebuggingFilter.DEBUG_ALL=debug
+    log4j.logger.ro.raisercostin.web.DebuggingFilter.PARAMETERS=debug
 }}}
-==Configure all logging==
-  To log all info add in log4j.properties file :
+  # To log the *request and header parameters* add in log4j.properties file :
 {{{
-    log4j.logger.ro.raisercostin.web.DebuggingFilter=debug
+    log4j.logger.ro.raisercostin.web.DebuggingFilter.REQUEST=debug
+}}}
+  # To log all *environment parameters* add in log4j.properties file :
+{{{
+    log4j.logger.ro.raisercostin.web.DebuggingFilter.ALL=debug
 }}}
 ==Configure maven dependencies==
  # Add this to your {{{pom.xml}}} file, inside {{{/project/dependencies/}}} :
