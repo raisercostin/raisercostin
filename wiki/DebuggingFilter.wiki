@@ -26,12 +26,12 @@ See how the [http://raisercostin.googlecode.com/files/jspinfo.jsp.html debug inf
 ==Configure request logging==
   To log the request info add in log4j.properties file :
 {{{
-    log4j.logger.ro.raisercostin.web.DebuggingFilter=debug
+    log4j.logger.ro.raisercostin.web.DebuggingFilter.DEBUG_ALL=debug
 }}}
-==Configure request logging==
+==Configure all logging==
   To log all info add in log4j.properties file :
 {{{
-    log4j.logger.ro.raisercostin.web.DebuggingFilter.DEBUG_ALL=debug
+    log4j.logger.ro.raisercostin.web.DebuggingFilter=debug
 }}}
 ==Configure maven dependencies==
  # Add this to your {{{pom.xml}}} file, inside {{{/project/dependencies/}}} :
