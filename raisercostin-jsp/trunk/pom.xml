@@ -5,7 +5,7 @@
     <modelVersion>4.0.0</modelVersion>
     <groupId>ro.raisercostin</groupId>
     <artifactId>raisercostin-jsp</artifactId>
-    <version>1.0</version>
+    <version>1.1</version>
     <name>raisercostin jsp</name>
     <description>
         raisercostin-jsp is a collection of jsp utilities
@@ -48,6 +48,11 @@
             <groupId>org.springframework</groupId>
             <artifactId>spring</artifactId>
             <version>2.0.6</version>
+        </dependency>
+        <dependency>
+            <groupId>log4j</groupId>
+            <artifactId>log4j</artifactId>
+            <version>1.2.9</version>
         </dependency>
     </dependencies>
     <properties>
