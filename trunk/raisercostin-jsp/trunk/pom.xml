@@ -1,11 +1,8 @@
-<?xml version="1.0" encoding="UTF-8"?>
-<project
-    xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/maven-v4_0_0.xsd"
-    xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/maven-v4_0_0.xsd">
     <modelVersion>4.0.0</modelVersion>
     <groupId>ro.raisercostin</groupId>
     <artifactId>raisercostin-jsp</artifactId>
-    <version>1.2-SNAPSHOT</version>
+    <version>1.2</version>
     <name>raisercostin jsp</name>
     <description>
         raisercostin-jsp is a collection of jsp utilities
@@ -13,12 +10,8 @@
     <url>http://raisercostin.googlecode.com</url>
     <inceptionYear>2008</inceptionYear>
     <scm>
-        <connection>
-            scm:svn:https://raisercostin.googlecode.com/svn/trunk/raisercostin-jsp/trunk
-        </connection>
-        <developerConnection>
-            scm:svn:http://raisercostin.googlecode.com/svn/trunk/raisercostin-jsp/trunk
-        </developerConnection>
+        <connection>scm:svn:https://raisercostin.googlecode.com/svn/trunk/raisercostin-jsp/tags/raisercostin-jsp-1.2</connection>
+        <developerConnection>scm:svn:http://raisercostin.googlecode.com/svn/trunk/raisercostin-jsp/tags/raisercostin-jsp-1.2</developerConnection>
     </scm>
     <build>
         <plugins>
