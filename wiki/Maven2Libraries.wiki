@@ -1,0 +1,7 @@
+#summary List of maven libraries hosted here
+#labels maven2,springmodulesvalidation,jarsourcesjavadoc
+= Location =
+http://raisercostin.googlecode.com/svn/maven2/
+
+= Libraries =
+org.springmodules:spring-modules-validation:jar:0.9
