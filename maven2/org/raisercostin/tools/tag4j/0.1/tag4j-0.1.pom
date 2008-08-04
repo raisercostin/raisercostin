@@ -1,0 +1,23 @@
+<?xml version="1.0"?><project>
+  <parent>
+    <artifactId>raisercostin</artifactId>
+    <groupId>org.raisercostin</groupId>
+    <version>1.0</version>
+  </parent>
+  <modelVersion>4.0.0</modelVersion>
+  <groupId>org.raisercostin.tools</groupId>
+  <artifactId>tag4j</artifactId>
+  <name>tag4j</name>
+  <version>0.1</version>
+  <description>tag4j</description>
+  <dependencies>
+    <dependency>
+      <groupId>org.raisercostin</groupId>
+      <artifactId>raisercostin-common</artifactId>
+      <version>1.1</version>
+    </dependency>
+  </dependencies>
+  <distributionManagement>
+    <status>deployed</status>
+  </distributionManagement>
+</project>
