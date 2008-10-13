@@ -46,6 +46,18 @@ public class DebuggingFilter implements Filter {
 				return debug(servletContext, (HttpServletRequest) request, (HttpServletResponse) response,
 						new HtmlPrinter(), true, true);
 			}
+			public boolean isRequested(){
+				String debug = request.getParameter("debug");
+				if(debug!=null)
+				{
+					if("false".equals(debug))
+					{
+						return false;
+					}
+					return true;
+				}
+				return false;
+			}
 		});
 		if (loggerParameters.isDebugEnabled()) {
 			loggerParameters.debug(debug(servletContext, (HttpServletRequest) request, (HttpServletResponse) response,
@@ -60,6 +72,7 @@ public class DebuggingFilter implements Filter {
 
 	public static interface DebugInfo {
 		String getJspInfo();
+		boolean isRequested();
 	}
 
 	public String debug(ServletContext servletContext, HttpServletRequest request, HttpServletResponse response,
@@ -88,22 +101,22 @@ public class DebuggingFilter implements Filter {
 			while (en.hasMoreElements()) {
 				String attrName = (String) en.nextElement();
 				try {
-					addRow(debuggingPrinter, attrName, request.getAttribute(attrName).toString());
+					addRow(debuggingPrinter, split(attrName,50), toString2(request.getAttribute(attrName),120));
 				} catch (Exception e) {
-					addRow(debuggingPrinter, attrName, toString(e));
+					addRow(debuggingPrinter, split(attrName,50), toString(e,120));
 				}
 
 			}
 			debuggingPrinter.endSection();
 
 			debuggingPrinter.addSection("Session Attributes");
-			en = request.getSession().getAttributeNames();
+			en = session.getAttributeNames();
 			while (en.hasMoreElements()) {
 				String attrName = (String) en.nextElement();
 				try {
-					addRow(debuggingPrinter, attrName, request.getAttribute(attrName).toString());
+					addRow(debuggingPrinter, split(attrName,50), toString2(session.getAttribute(attrName),120));
 				} catch (Exception e) {
-					addRow(debuggingPrinter, attrName, toString(e));
+					addRow(debuggingPrinter, split(attrName,50), toString(e,120));
 				}
 			}
 			debuggingPrinter.endSection();
@@ -162,12 +175,32 @@ public class DebuggingFilter implements Filter {
 		return debuggingPrinter.getString();
 	}
 
-	private String toString(Exception e) {
+	private String toString2(Object attribute,int maxSize) {
+		if(attribute==null)
+		{
+			return null;
+		}
+		String result = attribute.toString();
+		return split(result,maxSize);
+	}
+
+	private String toString(Exception e,int maxSize) {
 		StringWriter stringWriter = new StringWriter();
 		PrintWriter pw = new PrintWriter(stringWriter);
 		e.printStackTrace(pw);
 		pw.close();
-		return stringWriter.toString();
+		return split(stringWriter.toString(),maxSize);
+	}
+
+	private String split(String string,int maxLine) {
+		StringBuilder result = new StringBuilder();
+		int lastI=0;
+		for (int i = 0, maxsize = string.length(); i < maxsize-maxLine; i+=maxLine) {
+			result.append(string.substring(i,i+maxLine)).append("<br/>");
+			lastI = i+maxLine;
+		}
+		result.append(string.substring(lastI));
+		return result.toString();
 	}
 
 	private void addRow(DebuggingPrinter debuggingPrinter, String key, String value) {
@@ -311,6 +344,5 @@ public class DebuggingFilter implements Filter {
 			}
 			return value;
 		}
-
 	}
 }
