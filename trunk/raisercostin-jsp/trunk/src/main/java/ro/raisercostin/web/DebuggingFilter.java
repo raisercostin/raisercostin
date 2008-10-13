@@ -3,6 +3,8 @@ package ro.raisercostin.web;
 import org.apache.log4j.Logger;
 
 import java.io.IOException;
+import java.io.PrintWriter;
+import java.io.StringWriter;
 import java.util.Enumeration;
 import java.util.Iterator;
 import java.util.Map;
@@ -81,6 +83,31 @@ public class DebuggingFilter implements Filter {
 			}
 			debuggingPrinter.endSection();
 
+			debuggingPrinter.addSection("Request Attributes");
+			java.util.Enumeration en = request.getAttributeNames();
+			while (en.hasMoreElements()) {
+				String attrName = (String) en.nextElement();
+				try {
+					addRow(debuggingPrinter, attrName, request.getAttribute(attrName).toString());
+				} catch (Exception e) {
+					addRow(debuggingPrinter, attrName, toString(e));
+				}
+
+			}
+			debuggingPrinter.endSection();
+
+			debuggingPrinter.addSection("Session Attributes");
+			en = request.getSession().getAttributeNames();
+			while (en.hasMoreElements()) {
+				String attrName = (String) en.nextElement();
+				try {
+					addRow(debuggingPrinter, attrName, request.getAttribute(attrName).toString());
+				} catch (Exception e) {
+					addRow(debuggingPrinter, attrName, toString(e));
+				}
+			}
+			debuggingPrinter.endSection();
+
 			debuggingPrinter.addSection("Request Info");
 			addRow(debuggingPrinter, "AuthType", request.getAuthType());
 			addRow(debuggingPrinter, "ContextPath", request.getContextPath());
@@ -133,6 +160,14 @@ public class DebuggingFilter implements Filter {
 		}
 		debuggingPrinter.addFooter();
 		return debuggingPrinter.getString();
+	}
+
+	private String toString(Exception e) {
+		StringWriter stringWriter = new StringWriter();
+		PrintWriter pw = new PrintWriter(stringWriter);
+		e.printStackTrace(pw);
+		pw.close();
+		return stringWriter.toString();
 	}
 
 	private void addRow(DebuggingPrinter debuggingPrinter, String key, String value) {
