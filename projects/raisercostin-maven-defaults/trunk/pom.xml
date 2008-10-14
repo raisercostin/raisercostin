@@ -2,11 +2,11 @@
 	<modelVersion>4.0.0</modelVersion>
 	<groupId>org.raisercostin</groupId>
 	<artifactId>raisercostin-maven-defaults</artifactId>
-	<version>1.0-SNAPSHOT</version>
+	<version>1.0</version>
 	<packaging>pom</packaging>
     <scm>
-        <connection>scm:svn:https://raisercostin.googlecode.com/svn/projects/${project.artifactId}/trunk</connection>
-        <developerConnection>scm:svn:https://raisercostin.googlecode.com/svn/projects/${project.artifactId}/trunk</developerConnection>
+        <connection>scm:svn:https://raisercostin.googlecode.com/svn/projects/raisercostin-maven-defaults/tags/raisercostin-maven-defaults-1.0</connection>
+        <developerConnection>scm:svn:https://raisercostin.googlecode.com/svn/projects/raisercostin-maven-defaults/tags/raisercostin-maven-defaults-1.0</developerConnection>
     </scm>
 	<distributionManagement>
 		<!-- use the following if you're not using a snapshot version. -->
