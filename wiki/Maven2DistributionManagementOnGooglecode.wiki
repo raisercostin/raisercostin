@@ -1,5 +1,5 @@
 #summary How to configure maven2 distributionManagement to upload release on googlecode.com .
-#labels maven2,distributionManagement,googlecodeproject,configuration,upload,release
+#labels maven2,distributionManagement,googlecodeproject,configuration,upload,release,Featured
 
 = Configure distributionManagement in your pom.xml file =
  * For example
