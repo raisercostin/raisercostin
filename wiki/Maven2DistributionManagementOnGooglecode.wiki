@@ -1,0 +1,42 @@
+#summary How to configure maven2 distributionManagement to upload release on googlecode.com .
+#labels maven2,distributionManagement,googlecodeproject,configuration,upload,release
+
+= Configure distributionManagement in your pom.xml file =
+ * For example
+  {{{
+	<distributionManagement>
+		<!-- use the following if you're not using a snapshot version. -->
+		<repository>
+			<id>raisercostin.googlecode.releases</id>
+			<name>raisercostin.googlecode.releases</name>
+			<url>dav:https://raisercostin.googlecode.com/svn/maven2/</url>
+		</repository>
+		<!-- use the following if you ARE using a snapshot version. -->
+		<snapshotRepository>
+			<id>raisercostin.googlecode.snapshots</id>
+			<name>raisercostin.googlecode.snapshots</name>
+			<url>dav:https://raisercostin.googlecode.com/svn/maven2-snapshots/</url>
+		</snapshotRepository>
+     </distributionManagement>
+}}}
+ * Add credentials in your settings.xml file (*USER_HOME/.m2/settings.xml* - the recomended place or in MAVEN_HOME/conf/settings.xml)
+  {{{
+    <servers>
+        <server>
+            <id>raisercostin.googlecode.releases</id>
+            <username>raisercostin</username>
+            <password>*******</password>
+        </server>
+        <server>
+            <id>raisercostin.googlecode.snapshots</id>
+            <username>raisercostin</username>
+            <password>*******</password>
+        </server>
+    </servers>
+}}}
+= Details =
+
+Add your content here.  Format your content with:
+  * Text in *bold* or _italic_
+  * Headings, paragraphs, and lists
+  * Automatic links to other wiki pages
