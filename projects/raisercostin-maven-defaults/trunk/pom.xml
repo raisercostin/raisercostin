@@ -2,7 +2,7 @@
 	<modelVersion>4.0.0</modelVersion>
 	<groupId>org.raisercostin</groupId>
 	<artifactId>raisercostin-maven-defaults</artifactId>
-	<version>1.0</version>
+	<version>1.0-SNAPSHOT</version>
 	<packaging>pom</packaging>
     <scm>
         <connection>scm:svn:https://raisercostin.googlecode.com/svn/projects/${project.artifactId}/trunk</connection>
