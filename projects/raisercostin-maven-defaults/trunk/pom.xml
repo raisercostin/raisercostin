@@ -5,8 +5,8 @@
 	<version>1.0</version>
 	<packaging>pom</packaging>
     <scm>
-        <connection>scm:svn:https://raisercostin.googlecode.com/svn/trunk/${project.artifactId}/trunk</connection>
-        <developerConnection>scm:svn:https://raisercostin.googlecode.com/svn/trunk/${project.artifactId}/trunk</developerConnection>
+        <connection>scm:svn:https://raisercostin.googlecode.com/svn/projects/${project.artifactId}/trunk</connection>
+        <developerConnection>scm:svn:https://raisercostin.googlecode.com/svn/projects/${project.artifactId}/trunk</developerConnection>
     </scm>
 	<distributionManagement>
 		<!-- use the following if you're not using a snapshot version. -->
