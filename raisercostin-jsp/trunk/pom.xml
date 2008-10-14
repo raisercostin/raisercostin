@@ -13,7 +13,21 @@
         <connection>scm:svn:http://raisercostin.googlecode.com/svn/trunk/raisercostin-jsp/trunk</connection>
         <developerConnection>scm:svn:https://raisercostin.googlecode.com/svn/trunk/raisercostin-jsp/trunk</developerConnection>
     </scm>
-    <build>
+	<distributionManagement>
+		<!-- use the following if you're not using a snapshot version. -->
+		<repository>
+			<id>raisercostin.googlecode.releases</id>
+			<name>raisercostin.googlecode.releases</name>
+			<url>dav:https://raisercostin.googlecode.com/svn/maven2/</url>
+		</repository>
+		<!-- use the following if you ARE using a snapshot version. -->
+		<snapshotRepository>
+			<id>raisercostin.googlecode.snapshots</id>
+			<name>raisercostin.googlecode.snapshots</name>
+			<url>dav:https://raisercostin.googlecode.com/svn/maven2-snapshots/</url>
+		</snapshotRepository>
+     </distributionManagement>
+	 <build>
         <plugins>
             <plugin>
                 <artifactId>maven-compiler-plugin</artifactId>
