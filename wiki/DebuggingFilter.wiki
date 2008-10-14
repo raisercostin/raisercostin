@@ -19,9 +19,15 @@ See how the [http://raisercostin.googlecode.com/files/jspinfo.jsp.html debug inf
     </filter-mapping>
 }}}
 ==Configure web.xml==
-  Add this to desired jsp file :
+  * Add this to desired jsp file :
 {{{
     ${debug.jspInfo}
+}}}
+  * You can show the debug info only if in the request url there is a parameter named `debug`
+{{{
+    <c:if test="${debug.requested}">
+        ${debug.jspInfo}
+    </c:if>
 }}}
 ==Configure logging==
   # To log the *request parametes* add in log4j.properties file :
