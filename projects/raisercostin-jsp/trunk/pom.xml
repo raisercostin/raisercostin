@@ -2,7 +2,7 @@
     <modelVersion>4.0.0</modelVersion>
     <groupId>ro.raisercostin</groupId>
     <artifactId>raisercostin-jsp</artifactId>
-    <version>1.4-SNAPSHOT</version>
+    <version>1.4</version>
     <name>raisercostin jsp</name>
     <description>
         raisercostin-jsp is a collection of jsp utilities
@@ -10,8 +10,8 @@
     <url>http://raisercostin.googlecode.com</url>
     <inceptionYear>2008</inceptionYear>
     <scm>
-        <connection>scm:svn:http://raisercostin.googlecode.com/svn/projects/raisercostin-jsp/trunk</connection>
-        <developerConnection>scm:svn:https://raisercostin.googlecode.com/svn/projects/raisercostin-jsp/trunk</developerConnection>
+        <connection>scm:svn:http://raisercostin.googlecode.com/svn/projects/raisercostin-jsp/tags/raisercostin-jsp-1.4</connection>
+        <developerConnection>scm:svn:https://raisercostin.googlecode.com/svn/projects/raisercostin-jsp/tags/raisercostin-jsp-1.4</developerConnection>
     </scm>
 	<distributionManagement>
 		<!-- use the following if you're not using a snapshot version. -->
