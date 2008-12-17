@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8"?><metadata>
+  <groupId>ro.raisercostin</groupId>
+  <artifactId>raisercostin-jsp</artifactId>
+  <version>1.4-SNAPSHOT</version>
+  <versioning>
+    <snapshot>
+      <timestamp>20081217.085305</timestamp>
+      <buildNumber>1</buildNumber>
+    </snapshot>
+    <lastUpdated>20081217085319</lastUpdated>
+  </versioning>
+</metadata>
