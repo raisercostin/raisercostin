@@ -1,0 +1,8 @@
+<module>
+	<inherits name='com.google.gwt.user.User'/>
+	<inherits name='org.gwtwidgets.WidgetLibrary'/>
+	<inherits name="com.google.gwt.http.HTTP"/>
+	<entry-point class="org.raisercostin.modules.register.client.Module"/>
+	<servlet path="/RegisterService" class="org.raisercostin.modules.register.server.ModuleServiceImpl"/>
+	<servlet path="/verify.png" class="org.raisercostin.modules.register.server.VerificationServlet"/>
+</module>

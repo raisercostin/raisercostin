@@ -1,0 +1,66 @@
+<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+    xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/maven-v4_0_0.xsd">
+    <modelVersion>4.0.0</modelVersion>
+    <parent>
+        <groupId>org.raisercostin.maven</groupId>
+        <artifactId>gwt</artifactId>
+		<version>1.2</version>
+    </parent>
+    <groupId>org.raisercostin.modules</groupId>
+    <artifactId>register</artifactId>
+    <version>0.1-SNAPSHOT</version>
+    <dependencies>
+        <dependency>
+            <groupId>com.extjs</groupId>
+            <artifactId>gxt</artifactId>
+        </dependency>
+        <dependency>
+            <groupId>com.google.gwt</groupId>
+            <artifactId>gwt-incubator</artifactId>
+        </dependency>
+        <dependency>
+            <groupId>com.google.code.gwt-log</groupId>
+            <artifactId>gwt-log</artifactId>
+        </dependency>
+        <dependency>
+            <groupId>org.mcarthur</groupId>
+            <artifactId>GwtStuff</artifactId>
+        </dependency>
+        <dependency>
+            <groupId>net.sf.gwt-widget</groupId>
+            <artifactId>gwt-widgets</artifactId>
+        </dependency>
+    </dependencies>
+    <build>
+        <plugins>
+            <plugin>
+                <groupId>com.totsp.gwt</groupId>
+                <artifactId>maven-googlewebtoolkit2-plugin</artifactId>
+                <executions>
+                    <execution>
+                        <goals>
+                            <!-- <goal>mergewebxml</goal>-->
+                            <!-- <goal>i18n</goal>-->
+                            <goal>compile</goal>
+                            <goal>test</goal>
+                            <!-- <goal>gwt</goal>-->
+                        </goals>
+                    </execution>
+                </executions>
+            </plugin>
+            <plugin>
+                <groupId>org.jvnet.maven-antrun-extended-plugin</groupId>
+                <artifactId>maven-antrun-extended-plugin</artifactId>
+                <executions>
+                    <execution>
+                        <id>applicationContextCopy</id>
+                        <phase>package</phase>
+                        <goals>
+                            <goal>run</goal>
+                        </goals>
+                    </execution>
+                </executions>
+            </plugin>
+        </plugins>
+    </build>
+</project>
