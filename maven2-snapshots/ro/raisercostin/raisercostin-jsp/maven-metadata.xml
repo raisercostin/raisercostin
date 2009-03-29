@@ -1,11 +1,13 @@
-<?xml version="1.0" encoding="UTF-8"?><metadata>
+<?xml version="1.0" encoding="UTF-8"?>
+<metadata>
   <groupId>ro.raisercostin</groupId>
   <artifactId>raisercostin-jsp</artifactId>
   <version>1.4-SNAPSHOT</version>
   <versioning>
     <versions>
       <version>1.4-SNAPSHOT</version>
+      <version>1.5-SNAPSHOT</version>
     </versions>
-    <lastUpdated>20081217085305</lastUpdated>
+    <lastUpdated>20090329191148</lastUpdated>
   </versioning>
 </metadata>
