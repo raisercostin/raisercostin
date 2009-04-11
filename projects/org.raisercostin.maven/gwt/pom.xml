@@ -4,11 +4,11 @@
     <parent>
         <groupId>org.raisercostin.maven</groupId>
         <artifactId>all</artifactId>
-        <version>1.0</version>
+        <version>1.1</version>
     </parent>
     <groupId>org.raisercostin.maven</groupId>
     <artifactId>gwt</artifactId>
-    <version>1.2</version>
+    <version>1.4</version>
     <packaging>pom</packaging>
     <scm>
         <connection>scm:svn:https://raisercostin.googlecode.com/svn/projects/org.raisercostin.maven/gwt</connection>
@@ -281,7 +281,7 @@
         </profile>
     </profiles>
     <properties>
-        <gwtVersion>1.5.3</gwtVersion>
+        <gwtVersion>1.6.4</gwtVersion>
         <gwtModuleName>Module</gwtModuleName>
         <gwtJavaPackage>${project.groupId}.${project.artifactId}</gwtJavaPackage>
     </properties>
