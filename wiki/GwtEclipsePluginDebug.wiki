@@ -23,6 +23,6 @@
 </servlet>
 }}}
   # This will not work on jakarta-tomcat-5.0.28 but only after you upgrade GWT to use jakarta-tomcat-5.0.30
-   You can download the GWT compiled with this dependency from [https://raisercostin.googlecode.com/svn/maven2/com/google/gwt/gwt-dev/1.6.4.raisercostin/]
+   You can download the GWT compiled with this dependency from [http://raisercostin.googlecode.com/files/gwt-windows-1.6.4.raisercostin.zip]
   # Configure the GWT eclipse plugin with this new release
    Window>Preferences>Google>WebToolkit>Add... and select the unarchived folder with the zip downloaded previously.
