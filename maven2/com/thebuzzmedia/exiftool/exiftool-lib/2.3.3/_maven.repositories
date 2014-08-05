@@ -1,0 +1,6 @@
+#NOTE: This is an internal implementation file, its format can be changed without prior notice.
+#Tue Aug 05 19:17:21 EEST 2014
+exiftool-lib-2.3.3.jar>=
+exiftool-lib-2.3.3-javadoc.jar>=
+exiftool-lib-2.3.3.pom>=
+exiftool-lib-2.3.3-sources.jar>=
