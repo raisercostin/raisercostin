@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<metadata>
+  <groupId>com.thebuzzmedia.exiftool</groupId>
+  <artifactId>exiftool-lib</artifactId>
+  <versioning>
+    <versions>
+      <version>2.3.5-SNAPSHOT</version>
+    </versions>
+    <lastUpdated>20140806191119</lastUpdated>
+  </versioning>
+</metadata>
