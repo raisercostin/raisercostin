@@ -1,11 +1,13 @@
-<?xml version="1.0" encoding="UTF-8"?><metadata>
+<?xml version="1.0" encoding="UTF-8"?>
+<metadata>
   <groupId>org.raisercostin</groupId>
   <artifactId>raisercostin-common</artifactId>
-  <version>1.1</version>
   <versioning>
+    <release>2.19</release>
     <versions>
       <version>1.1</version>
+      <version>2.19</version>
     </versions>
-    <lastUpdated>20071021213349</lastUpdated>
+    <lastUpdated>20141002093136</lastUpdated>
   </versioning>
 </metadata>
