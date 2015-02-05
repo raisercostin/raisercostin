@@ -3,11 +3,12 @@
   <groupId>com.thebuzzmedia.exiftool</groupId>
   <artifactId>exiftool-lib</artifactId>
   <versioning>
-    <release>2.3.7</release>
+    <release>2.3.8</release>
     <versions>
       <version>2.3.6</version>
       <version>2.3.7</version>
+      <version>2.3.8</version>
     </versions>
-    <lastUpdated>20150124184603</lastUpdated>
+    <lastUpdated>20150205114428</lastUpdated>
   </versioning>
 </metadata>
