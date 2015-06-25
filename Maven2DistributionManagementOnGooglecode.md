@@ -1,0 +1,33 @@
+# Configure distributionManagement in your pom.xml file #
+  * For example
+```
+	<distributionManagement>
+		<!-- use the following if you're not using a snapshot version. -->
+		<repository>
+			<id>raisercostin.googlecode.releases</id>
+			<name>raisercostin.googlecode.releases</name>
+			<url>dav:https://raisercostin.googlecode.com/svn/maven2/</url>
+		</repository>
+		<!-- use the following if you ARE using a snapshot version. -->
+		<snapshotRepository>
+			<id>raisercostin.googlecode.snapshots</id>
+			<name>raisercostin.googlecode.snapshots</name>
+			<url>dav:https://raisercostin.googlecode.com/svn/maven2-snapshots/</url>
+		</snapshotRepository>
+     </distributionManagement>
+```
+  * Add credentials in your settings.xml file (**USER\_HOME/.m2/settings.xml** - the recomended place or in MAVEN\_HOME/conf/settings.xml)
+```
+    <servers>
+        <server>
+            <id>raisercostin.googlecode.releases</id>
+            <username>raisercostin</username>
+            <password>*******</password>
+        </server>
+        <server>
+            <id>raisercostin.googlecode.snapshots</id>
+            <username>raisercostin</username>
+            <password>*******</password>
+        </server>
+    </servers>
+```
